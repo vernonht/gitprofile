@@ -30,7 +30,7 @@ const LazyImage: React.FC<{
 
   return (
     <Fragment>
-      {loading ? placeholder : <img src={src} alt={alt} {...rest} />}
+      {loading ? placeholder : <img className='!object-fill' src={src} alt={alt} {...rest} />}
     </Fragment>
   );
 };

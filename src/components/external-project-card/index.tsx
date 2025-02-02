@@ -73,6 +73,10 @@ const ExternalProjectCard = ({
         key={index}
         href={item.link}
         onClick={(e) => {
+          if (!item.link) {
+            e.preventDefault();
+            return;
+          }
           e.preventDefault();
 
           try {
